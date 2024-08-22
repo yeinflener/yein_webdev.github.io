@@ -7,7 +7,7 @@
     <title>Portfolio</title>
     <link rel="icon" type="image/x-icon" href="../../image/favicon_10.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
       body {
         box-sizing: border-box;
@@ -79,7 +79,7 @@
 
       /* PROJECT section */
 
-      .about_card {
+      #about_card {
         display: grid;
         grid-template-columns: 1fr 2fr;
         align-items: center;
@@ -94,9 +94,10 @@
         padding: 5px 25px;
       }
       
-      .about_card:hover {
+      #about_card:hover {
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
         background-color: rgba(196, 193, 197, 0.2);
+        cursor: pointer;
       }
 
       #div_icon {
@@ -141,31 +142,6 @@
       color: rgb(27, 27, 27);
     }
 
-    /*social media buttons*/
-    .fa-brands {
-      padding: 20px;
-      font-size: 25px;
-      width: 20px;
-      height: 20px;
-      text-align: center;
-      text-decoration: none;
-      margin: 2px 3px;
-      border-radius: 50%;
-    }
-    .fa:hover {
-      opacity: 0.7;
-    }
-
-    .fa-facebook {
-    background: #3B5998;
-    color: white;
-    }
-
-    .fa-linkedin {
-    background: #007bb5;
-    color: white;
-    }
-
     /*media query*/
     @media screen and (max-width: 700px) {
         .footer_cont>text {
@@ -195,7 +171,7 @@
 
       /* Use a media query to add a breakpoint at 700px changing grid display to 1 column*/
       @media screen and (max-width: 700px) {
-        .about_card {
+        #about_card {
           width: 60%;
         }
         .topHeader {
@@ -207,7 +183,7 @@
           .no-display {
             visibility: hidden;
         }
-        .about_card {
+        #about_card {
         display: grid;
         grid-template-columns: 1fr;
         align-items: center;
@@ -272,9 +248,9 @@
     <!-- Project Section-->
   <div class="project_section">
     <h2 align="center">FINAL PROJECT</h2>    
-    <div class="about_card">   
+    <div id="about_card"  onclick="toFinalProject()">   
       <div id="div_icon">                            
-        <text id="item_icon"><i class='fas fa-bank' style='font-size:7rem; color:rgb(157, 84, 190);'></i></text>
+        <text id="item_icon"><i class='fa fa-bank' style='font-size:7rem; color:rgb(157, 84, 190);'></i></text>
       </div>
       <div class="about_bank">
         <text id="item_title" style="color: rgb(102, 101, 101);font-size: 1.5rem; font-weight: 700">BankEZ</text><br><br>
@@ -304,5 +280,11 @@
       <text><a href="https://github.com/yeinflener">GitHub</a></text>
     </div>
   </div>
+  <script>
+    function toFinalProject() {
+              window.location.href= "https://winter2024.uoadev.com/pages/yein-f/bankEZ_0801/bankEZ_home.html";
+    }            
+           
+  </script>
 </body>
 </html>
